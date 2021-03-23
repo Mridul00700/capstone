@@ -1,0 +1,5 @@
+export const LOAD_ALL_ISSUES = 'LOAD_ALL_ISSUES';
+export const DELETE_ISSUE = 'DELETE_ISSUE';
+export const ADD_ISSUE = 'ADD_ISSUE';
+export const IS_AUTHENTICATED = 'IS_AUTHENTICATED';
+export const REGISTER_USER = 'REGISTER_USER';
