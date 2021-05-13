@@ -12,7 +12,7 @@ export default function userReducer(state = initialState, action) {
         case actionTypes.IS_AUTHENTICATED:
             return { ...state, isAuthenticated: true }
         case actionTypes.GET_ALL_USERS_SUCCESS:
-            return { Users: action.Users, ...state }
+            return { ...state, Users: action.Users }
         default:
             return state;
     }
