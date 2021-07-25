@@ -74,7 +74,7 @@ const LoginUser = (props) => {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={}
+            // onClick={}
           >
             Sign In
           </Button>
