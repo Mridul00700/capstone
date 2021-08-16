@@ -17,6 +17,7 @@ export default class IssueApi {
         return axios.delete("http://localhost:3001/issues/" + id);
     };
 
+
 }
 
 

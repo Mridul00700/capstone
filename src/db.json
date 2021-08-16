@@ -2,15 +2,21 @@
   "Users": [
     {
       "id": "mridul@gmail.com",
-      "password": "123",
+      "password": "12345678",
       "firstName": "Mridul",
+      "lastName": "Mishra",
+      "location": "3/152",
+      "mobile": "7905360656"
+    },
+    {
+      "id": "achyut@gmail.com",
+      "password": "123456789",
+      "firstName": "Achyut",
       "lastName": "Mishra",
       "location": "3/152",
       "mobile": "7905360656"
     }
   ],
 
-  "Issues": [{
-    
-  }]
+  "Issues": [{}]
 }

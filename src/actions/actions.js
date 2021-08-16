@@ -16,9 +16,6 @@ export function deleteIssueSuccess(id) {
     return { type: types.DELETE_ISSUE_SUCCESS, id }
 }
 
-export function isAunthenticatedSuccess() {
-    return { type: types.IS_AUTHENTICATED }
-}
 
 export function registerUserSuccess(User) {
     return { type: types.REGISTER_USER_SUCCESS, User }
@@ -79,9 +76,4 @@ export function deleteIssue(id) {
     };
 }
 
-export function isAuthenticated() {
-    return function (dispatch) {
-        return dispatch(isAunthenticatedSuccess());
-    }
-}
 

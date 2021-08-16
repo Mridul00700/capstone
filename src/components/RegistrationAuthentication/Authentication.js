@@ -1,27 +1,19 @@
-import { useState } from 'react';
-import { connect } from 'react-redux';
+import { useContext } from 'react';
 import ViewDetails from './ViewRegistrationDetails';
-import * as userAction from '../../actions/actions';
-import { bindActionCreators } from 'redux';
 import Login from './LoginUser';
+import { CurrentUserContext } from '../../context';
 
 const Authentication = props => {
 
-    if (!props.isAuthenticated) {
+    const user = useContext(CurrentUserContext).currentUser;
+
+
+    if (user === "")
         return <Login />
-    }
     return <ViewDetails />
-
-
-
-
 }
 
-function mapStateToProps(state) {
-    return {
-        isAuthenticated: state.userReducer.isAuthenticated
-    }
-}
+export default Authentication;
 
 // function mapDispatchToProps(dispatch) {
 //     return {
@@ -29,5 +21,4 @@ function mapStateToProps(state) {
 //     }
 // }
 
-export default connect(mapStateToProps, null)(Authentication);
 
