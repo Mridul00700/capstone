@@ -55,54 +55,56 @@ const Navbar = props => {
     }
 
     return (
-        <div className={classes.root} >
-            <AppBar position="static">
-                <Toolbar>
+        <div className="navbar">
+            <div className={classes.root} >
+                <AppBar position="static">
+                    <Toolbar>
 
-                    <Typography variant="h6" className={classes.title}>
-                        Capstone
-                    </Typography>
+                        <Typography variant="h6" className={classes.title}>
+                            Capstone
+                        </Typography>
 
-                    {isMobile ? (<>
-                        <IconButton edge="start"
-                            className={classes.menuButton}
-                            color="inherit"
-                            aria-label="menu"
-                            onClick={handleMenu}>
-                            <MenuIcon />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorEl}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={open}
-                            onClose={() => setAnchorEl(null)}
-                        >
-                            <MenuItem onClick={() => handleMenuClick('/')} >About</MenuItem>
-                            <MenuItem onClick={() => handleMenuClick('/issues')}>Issue Tracker</MenuItem>
-                            <MenuItem onClick={() => handleMenuClick('/authentication')}>Authentication</MenuItem>
-                        </Menu> </>) :
-                        (
-                            <div className={classes.headerLinks}>
-                                <Button variant="contained" color="secondary" onClick={() => handleButtonClick('/')}   >About</Button>
-                                <Button variant="contained" color="secondary" onClick={() => handleButtonClick('/issues')}  >Issue Tracker</Button>
-                                <Button variant="contained" color="secondary" onClick={() => handleButtonClick('/authentication')}  >Authentication</Button>
-                            </div>
+                        {isMobile ? (<>
+                            <IconButton edge="start"
+                                className={classes.menuButton}
+                                color="inherit"
+                                aria-label="menu"
+                                onClick={handleMenu}>
+                                <MenuIcon />
+                            </IconButton>
+                            <Menu
+                                id="menu-appbar"
+                                anchorEl={anchorEl}
+                                anchorOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'right',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'right',
+                                }}
+                                open={open}
+                                onClose={() => setAnchorEl(null)}
+                            >
+                                <MenuItem onClick={() => handleMenuClick('/')} >About</MenuItem>
+                                <MenuItem onClick={() => handleMenuClick('/issues')}>Issue Tracker</MenuItem>
+                                <MenuItem onClick={() => handleMenuClick('/authentication')}>Authentication</MenuItem>
+                            </Menu> </>) :
+                            (
+                                <div className={classes.headerLinks}>
+                                    <Button variant="contained" color="secondary" onClick={() => handleButtonClick('/')}   >About</Button>
+                                    <Button variant="contained" color="secondary" onClick={() => handleButtonClick('/issues')}  >Issue Tracker</Button>
+                                    <Button variant="contained" color="secondary" onClick={() => handleButtonClick('/authentication')}  >Authentication</Button>
+                                </div>
 
-                        )
+                            )
 
-                    }
-                </Toolbar>
-            </AppBar>
-        </div >
+                        }
+                    </Toolbar>
+                </AppBar>
+            </div >
+        </div>
     );
 }
 

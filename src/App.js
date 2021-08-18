@@ -9,8 +9,8 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <main>
+      <main className="main">
+        <Navbar />
         <Switch>
           <Route path="/" exact><About /></Route>
           <Route path="/issues" exact><IssueTracker /></Route>

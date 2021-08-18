@@ -4,5 +4,8 @@
 
 body {
   margin: 0;
-  background: #ece3e3;
+}
+
+#root {
+  height: 100vh;
 }

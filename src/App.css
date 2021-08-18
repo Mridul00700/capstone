@@ -1,1 +1,5 @@
-
+.main {
+  background-color: #ece3e3;
+  height: 100%;
+  /* overflow: hidden; */
+}

@@ -74,7 +74,6 @@ const LoginUser = (props) => {
       .min(8, 'Must be 8 characters or more').required('Required'),
     email: Yup.string().email('Invalid email address').required('Required'),
   });
-  console.log(schema);
 
 
   return (
@@ -99,7 +98,8 @@ const LoginUser = (props) => {
             onSubmit={(values, { setSubmitting }) => {
               setSubmitting(true);
               const user = Users.filter(user => user.id === values.email)
-              if (user && user.password === values.password) {
+              if (!(user.length === 0) && user[0]?.password === values.password) {
+                console.log("Logged In");
                 history.push("/issues");
                 setUser(user.id);
               }
