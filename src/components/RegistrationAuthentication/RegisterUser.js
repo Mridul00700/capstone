@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -14,6 +13,8 @@ import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
 import { Formik } from "formik";
 import * as Yup from 'yup';
+import { connect } from "react-redux";
+
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function RegisterUser() {
+function RegisterUser() {
     const classes = useStyles();
 
 
@@ -212,3 +213,16 @@ export default function RegisterUser() {
         </Container>
     );
 }
+
+function mapStateToProps(state) {
+    return {
+        Users: state.userReducer.Users
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser);
