@@ -66,6 +66,15 @@
       "status": "open",
       "dateResolved": "",
       "description": "Pc is not working, its hanging."
+    },
+    {
+      "id": "1231231231234",
+      "dateCreated": "2019/09/12",
+      "title": "laptop Issues",
+      "severity": "severe",
+      "status": "working",
+      "dateResolved": "2019/09/14",
+      "description": "Laptop is not working, its hanging."
     }
   ]
 }

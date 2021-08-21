@@ -7,11 +7,11 @@ const initialState = {
 export default function issueReducer(state = initialState, action) {
     switch (action.type) {
         case actionTypes.LOAD_ALL_ISSUES_SUCCESS:
-            return action.Issues
+            return { Issues: action.Issues }
         case actionTypes.ADD_ISSUE_SUCCESS:
-            return [...state, action.Issue]
+            return { Issues: [...state, action.Issue] }
         case actionTypes.DELETE_ISSUE_SUCCESS:
-            let newState = state.filter(issue => issue.id !== action.id);
+            let newState = state.Issues.filter(issue => issue.id !== action.id);
             return newState;
         default:
             return state;
