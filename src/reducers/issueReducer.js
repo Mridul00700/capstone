@@ -1,8 +1,10 @@
 import * as actionTypes from '../actionTypes/actionTypes';
 
+const initialState = {
+    Issues: []
+}
 
-
-export default function issueReducer(state = [], action) {
+export default function issueReducer(state = initialState, action) {
     switch (action.type) {
         case actionTypes.LOAD_ALL_ISSUES_SUCCESS:
             return action.Issues

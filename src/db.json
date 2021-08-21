@@ -58,6 +58,14 @@
     }
   ],
   "Issues": [
-    {}
+    {
+      "id": "123123123123431wed",
+      "dateCreated": "",
+      "title": "Pc Issues",
+      "severity": "high",
+      "status": "open",
+      "dateResolved": "",
+      "description": "Pc is not working, its hanging."
+    }
   ]
 }
