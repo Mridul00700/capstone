@@ -25,6 +25,11 @@ export function addIssueSuccess(Issue) {
     return { type: types.ADD_ISSUE_SUCCESS, Issue }
 }
 
+export function editIssueSuccess(issue) {
+    // console.log(issue);
+    return { type: types.EDIT_ISSUE_SUCCESS, issue }
+}
+
 export function loadUsers() {
     return function (dispatch) {
         return UserApi.getAllUsers().then(users => {
@@ -33,6 +38,14 @@ export function loadUsers() {
             throw (error);
         });
     };
+}
+
+export function editIssue(issue) {
+    return function (dispatch) {
+        return IssueApi.editIssue(issue).then(issue => {
+            dispatch(editIssueSuccess(issue))
+        }).catch(error)
+    }
 }
 
 export function addUser(user) {
@@ -75,5 +88,4 @@ export function deleteIssue(id) {
         });
     };
 }
-
 

@@ -11,8 +11,14 @@ export default function issueReducer(state = initialState, action) {
         case actionTypes.ADD_ISSUE_SUCCESS:
             return { Issues: [...state, action.Issue] }
         case actionTypes.DELETE_ISSUE_SUCCESS:
-            let newState = state.Issues.filter(issue => issue.id !== action.id);
+            let newState = { Issues: state.Issues.filter(issue => issue.id !== action.id) }
             return newState;
+        case actionTypes.EDIT_ISSUE_SUCCESS:
+            console.log(action.issue, state.Issues);
+            let newState1 = { Issues: state.Issues.filter(issue => issue.id !== action.issue.id) }
+            newState1.Issues.push(action.issue)
+            console.log(newState1);
+            return newState1
         default:
             return state;
     }
