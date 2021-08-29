@@ -59,15 +59,6 @@
   ],
   "Issues": [
     {
-      "id": "123123123123431wed",
-      "dateCreated": "2014-01-18",
-      "title": "Pc Issues",
-      "severity": "high",
-      "status": "open",
-      "dateResolved": "",
-      "description": "Pc is not working, its hanging."
-    },
-    {
       "id": "1231231231234",
       "dateCreated": "2093/12/18",
       "title": "laptop Issues",

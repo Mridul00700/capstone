@@ -51,6 +51,13 @@ const IssueTracker = props => {
         { title: "Title", field: "title", align: "center" },
         { title: "Date Resolved", field: "dateResolved", align: "center", emptyField: "Null" },
         { title: "Status", field: "status", align: "center" },
+        {
+            title: "View Details", editComponent: (table) => {
+                return (
+                
+            )
+            }
+        }
         // {title: "Actions", field: "actions", align: "center" }
     ]
     //  render: () => <><EditIcon color="primary" padding="10px"></EditIcon> <DeleteIcon color="secondary"></DeleteIcon></>
@@ -84,6 +91,12 @@ const IssueTracker = props => {
                     newTabelData[oldRow.tableData.id] = newRow;
                     setTableData(newTabelData);
                     props.editIssue(newData);
+                    setTimeout(() => resolve(), 500);
+                }),
+                onRowDelete: (selectedRow) => new Promise((resolve, reject) => {
+                    props.deleteIssue(selectedRow._id)
+                    const newTableData = tableData.filter(data => data._id !== selectedRow._id)
+                    setTableData(newTableData);
                     setTimeout(() => resolve(), 500);
                 })
             }}

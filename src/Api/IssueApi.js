@@ -14,7 +14,7 @@ export default class IssueApi {
     }
 
     static deleteIssue(id) {
-        return axios.delete("http://localhost:3001/issues/" + id);
+        return axios.delete("http://localhost:3001/issues/", id);
     };
 
     static editIssue(issue) {
