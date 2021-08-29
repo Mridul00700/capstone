@@ -1,8 +1,6 @@
 import { connect } from "react-redux";
 import { useState, useEffect } from 'react';
 import * as actions from '../../actions/actions';
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
 import MaterialTable from "material-table";
 import 'date-fns';
 import React from 'react';
@@ -82,8 +80,11 @@ const IssueTracker = props => {
                         dateResolved: newRow.resolvedDate,
                         description: oldRow.description
                     }
-                    console.log(newData);
+                    const newTabelData = [...tableData]
+                    newTabelData[oldRow.tableData.id] = newRow;
+                    setTableData(newTabelData);
                     props.editIssue(newData);
+                    setTimeout(() => resolve(), 500);
                 })
             }}
             data={tableData}
@@ -104,7 +105,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         deleteIssue: id => { dispatch(actions.deleteIssue(id)) },
-        editIssue: issue => { dispatch(actions.editIssueSuccess(issue)) }
+        editIssue: issue => { dispatch(actions.editIssue(issue)) }
     }
 }
 

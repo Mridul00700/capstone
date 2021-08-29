@@ -18,10 +18,9 @@ export default class IssueApi {
     };
 
     static editIssue(issue) {
-        return axios.post("http://localhost:3001/issues", issue)
+        console.log(issue.id);
+        return axios.put(`http://localhost:3001/issues/${issue.id}`, issue).then(res => res.data)
     }
-
-
 }
 
 

@@ -44,7 +44,9 @@ export function editIssue(issue) {
     return function (dispatch) {
         return IssueApi.editIssue(issue).then(issue => {
             dispatch(editIssueSuccess(issue))
-        }).catch(error)
+        }).catch(error => {
+            throw (error)
+        })
     }
 }
 
