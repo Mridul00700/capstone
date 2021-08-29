@@ -1,16 +1,18 @@
 import { connect } from "react-redux";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import * as actions from '../../actions/actions';
 import MaterialTable from "material-table";
 import 'date-fns';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
+import { CurrentUserContext } from '../../context';
 import {
     MuiPickersUtilsProvider,
     KeyboardDatePicker,
 } from '@material-ui/pickers';
 import moment from "moment";
+import { Link } from 'react-router-dom';
 
 const IssueTracker = props => {
 
@@ -19,6 +21,7 @@ const IssueTracker = props => {
     let id = 1;
     const [tableData, setTableData] = useState([]);
     // const [selectedDate, setSelectedDate] = useState(new Date());
+    const user = useContext(CurrentUserContext).currentUser;
     const columns = [
         { title: "_ID", field: "_id", hidden: true },
         { title: "Description", field: "_description", hidden: true },
@@ -52,10 +55,10 @@ const IssueTracker = props => {
         { title: "Date Resolved", field: "dateResolved", align: "center", emptyField: "Null" },
         { title: "Status", field: "status", align: "center" },
         {
-            title: "View Details", editComponent: (table) => {
+            title: "View Details", render: (row) => {
                 return (
-                
-            )
+                    user.length > 0 ? <Link to={`/issues/viewdetails/${row._id}`}> View Details</Link> : <Link to="/authentication">View Details(Please Login)</Link>
+                )
             }
         }
         // {title: "Actions", field: "actions", align: "center" }
