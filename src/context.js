@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
-export const CurrentUserContext = React.createContext();
+export const CurrentUserContext = React.createContext({
+    currentUser: '',
+    setCurrentUser: () => { }
+});
 
 
 
-export default props => {
+const CurrentUser = props => {
     const [currentUser, setCurrentUser] = useState("")
 
     return (
@@ -14,3 +17,4 @@ export default props => {
     );
 }
 
+export default CurrentUser;
