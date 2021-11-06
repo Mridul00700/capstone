@@ -97,11 +97,11 @@ const LoginUser = (props) => {
             validationSchema={schema}
             onSubmit={(values, { setSubmitting }) => {
               setSubmitting(true);
-              const user = Users.filter(user => user.id === values.email)
-              if (!(user.length === 0) && user[0]?.password === values.password) {
-                console.log("Logged In");
+              let user = []
+              user = Users.filter(user => user.id === values.email)
+              if (!(user?.length === 0) && user[0]?.password === values.password) {
+                setUser(user[0].id);
                 history.push("/issues");
-                setUser(user.id);
               }
               else {
                 setSubmitting(false);

@@ -87,7 +87,7 @@
       "id": "fdffe0a-61b-336-ed0f-210f5bea5f",
       "dateCreated": "2050/01/01",
       "title": "Pc Issues",
-      "severity": "low",
+      "severity": "High",
       "status": "open",
       "dateResolved": "Invalid date",
       "description": "Pc is not working, its hanging."

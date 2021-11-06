@@ -3,23 +3,23 @@ import uuid from 'react-uuid';
 
 export default class IssueApi {
     static getAllIssues() {
-        return axios.get("http://localhost:3001/issues")
+        return axios.get("http://localhost:3000/issues")
             .then(res => res.data);
     }
 
     static saveIssue(issue) {
         issue.id = uuid();
-        return axios.post("http://localhost:3001/issues", issue)
+        return axios.post("http://localhost:3000/issues", issue)
             .then(res => res.data)
     }
 
     static deleteIssue(id) {
-        return axios.delete("http://localhost:3001/issues/", id);
+        return axios.delete("http://localhost:3000/issues/", id);
     };
 
     static editIssue(issue) {
         console.log(issue.id);
-        return axios.put(`http://localhost:3001/issues/${issue.id}`, issue).then(res => res.data)
+        return axios.put(`http://localhost:3000/issues/${issue.id}`, issue).then(res => res.data)
     }
 }
 

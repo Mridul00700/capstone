@@ -8,7 +8,7 @@ export const CurrentUserContext = React.createContext({
 
 
 const CurrentUser = props => {
-    const [currentUser, setCurrentUser] = useState("")
+    const [currentUser, setCurrentUser] = useState('')
 
     return (
         <CurrentUserContext.Provider value={{ currentUser, setCurrentUser }}>
