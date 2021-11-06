@@ -7,6 +7,7 @@ import Authentication from './components/RegistrationAuthentication/Authenticati
 import UserRegister from './components/RegistrationAuthentication/RegisterUser';
 import ViewDetails from './components/IssueTracker/ViewDetails';
 import { CurrentUserContext } from './context';
+import CreateIssue from './components/IssueTracker/CreateIssue';
 
 import './App.css';
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/authentication" exact> <Authentication /></Route>
           <Route path="/authentication/register"><UserRegister /></Route>
           {user.length > 0 ? <Route path="/issues/viewdetails/:id"><ViewDetails /></Route> : null}
+          <Route path="/issues/createIssue"><CreateIssue /></Route>
           <Redirect to="/" />
         </Switch>
       </main>

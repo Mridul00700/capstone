@@ -76,7 +76,9 @@ const IssueTracker = props => {
 
     return (<>
         <div className={classes['create-button']}>
-            <Button variant="contained" color="secondary" disabled={!user.length > 0}>Create New Issue</Button>
+            <Link to={`/issues/createIssue`} style={{ textDecoration: 'none' }}>
+                <Button variant="contained" color="secondary" disabled={!user.length > 0}>Create New Issue</Button>
+            </Link>
         </div>
         <div className={classes.container}>
             <MaterialTable
