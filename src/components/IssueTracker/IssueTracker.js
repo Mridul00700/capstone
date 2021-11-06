@@ -70,7 +70,7 @@ const IssueTracker = props => {
         setTableData(props.Issues.map(issue => {
             return { _id: issue.id, id: id++, description: issue.description, severity: issue.severity, title: issue.title, status: issue.status, createdDate: issue.dateCreated, resolvedDate: issue.dateResolved }
         }));
-    }, []);
+    }, [props.Issues, id]);
 
     console.log(props.Issues);
 
