@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import configureStore from './store/store';
-import { loadIssues, loadUsers } from './actions/actions';
+import { loadIssues, loadUsers, getTrends } from './actions/actions';
 import { Provider } from 'react-redux';
 import CurrentUserProvider from './context';
 
 const store = configureStore();
 store.dispatch(loadIssues());
 store.dispatch(loadUsers());
+store.dispatch(getTrends());
 
 
 ReactDOM.render(

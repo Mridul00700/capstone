@@ -45,8 +45,8 @@ export function getAllTrendsSuccess(Trends) {
 
 export function getTrends() {
     return function (dispatch) {
-        return TrendsApi.getAllTrends().then(trends => {
-            dispatch(getAllTrendsSuccess(trends));
+        return TrendsApi.getAllTrends().then(Trends => {
+            dispatch(getAllTrendsSuccess(Trends));
         }).catch(error => {
             throw error;
         });
@@ -64,8 +64,10 @@ export function editTrends(issue) {
 }
 
 export function addTrends(issue) {
+    console.log(issue)
     return function (dispatch) {
         return TrendsApi.addTrends(issue).then(issue => {
+            console.log(issue)
             dispatch(addTrendSuccess(issue))
         }).catch(error => {
             throw error;

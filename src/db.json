@@ -93,5 +93,26 @@
       "description": "Pc is not working, its hanging."
     }
   ],
-  "Trends": []
+  "Trends": [
+    {
+      "id": "fdffe0a-61b-336-ed0f-210f5bea5f",
+      "dateCreated": "2050/01/01",
+      "title": "Pc Issues",
+      "severity": "High",
+      "status": "open",
+      "dateResolved": "Invalid date",
+      "description": "Pc is not working, its hanging.",
+      "views": 3
+    },
+    {
+      "id": "1231231231234",
+      "dateCreated": "2093/12/18",
+      "title": "laptop Issues",
+      "severity": "severe",
+      "status": "Closed",
+      "dateResolved": "2019/09/14",
+      "description": "Laptop is not working, its hanging.",
+      "views": 2
+    }
+  ]
 }
