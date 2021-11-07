@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import { useState, useEffect } from 'react';
 import * as actions from '../../actions/actions';
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     customBorderRadius: {
@@ -45,6 +46,11 @@ function ViewDetails({ Issues, Trends, editTrend, addTrend }) {
 
     console.log(Trends);
 
+
+    const insightHandler = () => {
+        setInsights(!insights);
+    }
+
     return (<>
         <h3 style={{ display: "flex", justifyContent: "center" }}>Issues Detail</h3>
         <div style={{ display: "flex", justifyContent: "center" }}>
@@ -58,6 +64,13 @@ function ViewDetails({ Issues, Trends, editTrend, addTrend }) {
                     <div>Description: {issue[0].description}</div>
                 </div>
             </Paper>
+        </div>
+        <br />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button variant="contained" color="secondary" onClick={insightHandler} >{insights ? 'Hide Insights' : 'Show Insights'}</Button>
+        </div>
+        <div>
+            {insights && <p>insights</p>}
         </div>
     </>
     )
