@@ -70,7 +70,7 @@ function ViewDetails({ Issues, Trends, editTrend, addTrend }) {
             <Button variant="contained" color="secondary" onClick={insightHandler} >{insights ? 'Hide Insights' : 'Show Insights'}</Button>
         </div>
         <div>
-            {insights && <p>insights</p>}
+            {insights && <p>insights charts</p>}
         </div>
     </>
     )
