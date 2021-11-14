@@ -91,6 +91,15 @@
       "status": "open",
       "dateResolved": "Invalid date",
       "description": "Pc is not working, its hanging."
+    },
+    {
+      "id": "123123123456456",
+      "dateCreated": "2093/12/18",
+      "title": "tablet Issues",
+      "severity": "severe",
+      "status": "open",
+      "dateResolved": "2019/09/14",
+      "description": "tablet is not working, its hanging."
     }
   ],
   "Trends": [
@@ -102,7 +111,7 @@
       "status": "open",
       "dateResolved": "Invalid date",
       "description": "Pc is not working, its hanging.",
-      "views": 3
+      "views": 4
     },
     {
       "id": "1231231231234",
@@ -112,7 +121,17 @@
       "status": "Closed",
       "dateResolved": "2019/09/14",
       "description": "Laptop is not working, its hanging.",
-      "views": 7
+      "views": 18
+    },
+    {
+      "id": "123123123456456",
+      "dateCreated": "2093/12/18",
+      "title": "tablet Issues",
+      "severity": "severe",
+      "status": "open",
+      "dateResolved": "2019/09/14",
+      "description": "tablet is not working, its hanging.",
+      "views": 5
     }
   ]
 }
